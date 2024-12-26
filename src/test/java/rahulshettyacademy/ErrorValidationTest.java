@@ -25,7 +25,7 @@ public class ErrorValidationTest extends BaseTest {
 	@Test(groups= {"Error Handling"},retryAnalyzer=Retry.class)	
 	public void errorValiation() throws IOException, InterruptedException	{		
 		// TODO Auto-generated method stub		
-		String productName="IPHONE 13 PRO";		
+		String productName="ADIDAS ORIGINAL";		
 		landingPage.loginApplication("thoufidm87@gmail.com", "thissEcommerce@123");		
 		String errorMessage=landingPage.getErrorMessage();		
 		Assert.assertEquals(errorMessage, "Incorrect email or password.");					
@@ -33,7 +33,7 @@ public class ErrorValidationTest extends BaseTest {
 	@Test	
 	public void productErrorValidation() throws IOException, InterruptedException	{		
 		// TODO Auto-generated method stub		
-		String productName="IPHONE 13 PRO";		
+		String productName="ADIDAS ORIGINAL";		
 		ProductCatalogue productCatalogue=landingPage.loginApplication("thoufidm87@gmail.com","thisisEcommerce@123");		
 		List<WebElement> products=productCatalogue.getProductList();		
 		productCatalogue.addToCart(productName);		
